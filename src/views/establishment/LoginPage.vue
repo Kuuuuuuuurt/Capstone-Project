@@ -27,7 +27,7 @@
           </div>
           <div class="mt-9">
             <ion-item>
-              <ion-label position="floating">Mobile Number</ion-label>
+              <ion-label position="floating">Establishment ID</ion-label>
               <ion-input></ion-input>
             </ion-item>
           </div>
@@ -46,7 +46,12 @@
           </div>
 
           <div class="text-center mt-5">
-            <ion-button color="dark" class="w-3/5" shape="round" type="submit" @click="toHomePage"
+            <ion-button
+              color="dark"
+              class="w-3/5"
+              shape="round"
+              type="submit"
+              @click="toHomePage"
               >Login</ion-button
             >
           </div>
@@ -55,7 +60,9 @@
             <ion-button color="dark" fill="clear" disabled="true"
               >New User?</ion-button
             >
-            <ion-button color="secondary" fill="clear" @click="toSignUp">Sign Up</ion-button>
+            <ion-button color="secondary" fill="clear" @click="toSignUp"
+              >Sign Up</ion-button
+            >
           </div>
 
           <div class="text-center mt-7">
@@ -66,9 +73,7 @@
             <ion-button color="dark" fill="clear" disabled="true"
               >Sign in as</ion-button
             >
-            <ion-button color="secondary" fill="clear" @click="toEstablishmentLogin"
-              >Establishment</ion-button
-            >
+            <ion-button color="secondary" fill="clear">Individual</ion-button>
           </div>
         </div>
       </div>
@@ -104,19 +109,14 @@ export default defineComponent({
     IonToolbar,
   },
 
- 
-
-  methods:{
-    toSignUp(){
-      this.$router.push("/individual-regstration");
+  methods: {
+    toSignUp() {
+      this.$router.push("/establishment-registration");
     },
-    toHomePage(){
+    toHomePage() {
       this.$router.push("/individual-home");
     },
-    toEstablishmentLogin(){
-      this.$router.push("/establishment-login");
-    }
-  }
+  },
 });
 </script>
 

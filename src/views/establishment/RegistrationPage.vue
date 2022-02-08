@@ -28,36 +28,8 @@
 
             <div class="mt-2">
               <ion-item>
-                <ion-label position="floating">Mobile Number</ion-label>
+                <ion-label position="floating">Contact Number</ion-label>
                 <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">First Name</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Middle Name</ion-label>
-                <ion-input placeholder="Optional"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Last Name</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Suffix</ion-label>
-                <ion-input placeholder="Optional"></ion-input>
               </ion-item>
             </div>
 
@@ -155,8 +127,11 @@
               <ion-button color="dark" fill="clear" disabled="true"
                 >Sign up as</ion-button
               >
-              <ion-button color="secondary" fill="clear"
-                >Establishment</ion-button
+              <ion-button
+                color="secondary"
+                fill="clear"
+                @click="toLoginIndividual"
+                >Individual</ion-button
               >
             </div>
           </div>
@@ -198,17 +173,10 @@ export default defineComponent({
     const alert = await alertController.create({
       cssClass: "my-custom-class",
       header: "Privacy Policy",
-      message: `This appointment and scheduling system allocates slots on a first come, first served basis.
-        Users accept the responsibility for supplying, checking, and
-        verifying the accuracy and correctness of the information they
-        provide on this system in connection with their application.
-        Incorrect or inaccurate information supplied may result in
-        forfeiture of passport application.
-        Users accept the responsibility for supplying, checking, and
-          verifying the accuracy and correctness of the information they
-          provide on this system in connection with their application.
-          Incorrect or inaccurate information supplied may result in
-          forfeiture of passport application.
+      message: `Welcome to TRAFEX System.
+The City of Ozamiz (“us”, “we”, or “our”) operates the TRAFEX System (hereinafter referred to as “Service”). We are committed to protecting your privacy as a Ozamiz resident, and even as a non-resident of this City.
+Our Data Privacy Statement governs your visit to this site and explains how we collect, safeguard and disclose information that results from your use of our Service.
+The confidentiality of your information remains our top priority. We shall exert all reasonable efforts to protect it against unauthorized use or disclosure.
         `,
       buttons: ["agree", "disagree"],
     });
@@ -220,7 +188,10 @@ export default defineComponent({
 
   methods: {
     toSignIn() {
-      this.$router.push("/individual-login");
+      this.$router.push("/establishment-login");
+    },
+    toLoginIndividual() {
+      this.$router.push("/individual-regstration");
     },
   },
 });

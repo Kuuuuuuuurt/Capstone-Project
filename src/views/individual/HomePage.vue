@@ -9,13 +9,15 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">LoginPagess</ion-title>
+          <ion-title size="large">LoginPage</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <div class="h-5/6 w-96 mx-auto block bg-inherit py-1.5 px-1.5 my-3">
         <div class="w-3/5 mx-auto block drop-shadow-lg">
-          <img src="https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/core_market_full/generator/dist/generator/assets/images/websiteQRCode_noFrame.png">
+          <img
+            src="https://www.qr-code-generator.com/wp-content/themes/qr/new_structure/markets/core_market_full/generator/dist/generator/assets/images/websiteQRCode_noFrame.png"
+          />
           <div class="text-center mt-2">
             <ion-label>fe4s-fd32-fdg4-dfvw</ion-label>
           </div>
