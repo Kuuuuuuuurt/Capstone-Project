@@ -23,7 +23,7 @@
           >
             <img
               class="mx-auto"
-              src="../assets/icons/qr-code-scan.png"
+              src="../assets/icons/home.png"
               alt="Home"
             />
           </a>
@@ -44,7 +44,7 @@
           >
             <img
               class="mx-auto"
-              src="../assets/icons/qr-code-scan.png"
+              src="../assets/icons/qr-code.png"
               alt="qe code"
             />
           </a>
@@ -65,7 +65,7 @@
           >
             <img
               class="mx-auto"
-              src="../assets/icons/qr-code-scan.png"
+              src="../assets/icons/question.png"
               alt="svelte logo"
             />
           </a>
@@ -86,7 +86,7 @@
           >
             <img
               class="mx-auto"
-              src="../assets/icons/qr-code-scan.png"
+              src="../assets/icons/settings.png"
               alt="svelte logo"
             />
           </a>

@@ -7,6 +7,7 @@ import RegistrationPageForIndividual from '../views/individual/RegistrationPage.
 import HomePageForIndividual from '../views/individual/HomePage.vue'
 import HealthDeclationFormIndividual from '../views/individual/HealthDeclarationForm.vue'
 import UpdateProfileForIndividual from '../views/individual/UpdateProfile.vue'
+import QrcodePage from '../views/individual/QrcodePage.vue'
 
 
 import LoginPageforEstablishment from '../views/establishment/LoginPage.vue'
@@ -48,6 +49,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/individual-update-profile',
     name: 'UpdateProfile',
     component: UpdateProfileForIndividual
+  },
+  {
+    path: '/individual-qrcode-page',
+    name: 'QrcodePage',
+    component: QrcodePage
   },
 
 
