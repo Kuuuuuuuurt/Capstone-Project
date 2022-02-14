@@ -2,7 +2,57 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Welcome</ion-title>
+         <div>
+    <aside
+      class="flex lg:flex-col lg:items-center text-gray-700 shadow h-full"
+    >
+      <!-- Side Nav Bar-->
+
+
+      <ul class="flex w-min absolute top-0 right-0">
+        <!-- Items Section -->
+     
+        <li class="hover:bg-gray-100 w-20 lg:w-full ">
+          <a
+            href="/individual-regstration"
+            class="
+              h-16
+              px-6
+              flex flex
+              justify-center
+              items-center
+              lg:w-full
+              focus:text-orange-500
+              text-blue-400
+              capitalize
+            "
+          >
+            <label class='block capitalize tracking-wide text-gray-700 text-m font-bold' >Login</label>
+          </a>
+        </li>
+
+        <li class="hover:bg-gray-100">
+          <a
+            href="."
+            class="
+              h-16
+              px-6
+              flex flex
+              justify-center
+              items-center
+              lg:w-full
+              focus:text-orange-500
+            "
+          >
+           <label class='block capitalize tracking-wide text-gray-700 text-m font-bold' >about</label>
+          </a>
+        </li>
+
+      </ul>
+
+     
+    </aside>
+  </div>
       </ion-toolbar>
     </ion-header>
 
@@ -12,10 +62,10 @@
           <ion-title size="large">RegistrationPage</ion-title>
         </ion-toolbar>
       </ion-header>
-      <div>
+<div>
         <div class="h-5/6 w-96 mx-auto block bg-inherit py-1.5 px-1.5 my-3">
           <div>
-            <div>
+                  <div>
               <ion-text class="text-2xl font-extrabold"
                 >Create your account</ion-text
               >
@@ -97,26 +147,30 @@
               </div>
 
               <div class="mt-5">
-                <input type="checkbox" />
-                <ion-label class="ml-2"
-                  >I have read and accept the Privacy Policy.</ion-label
+                <ion-label
+                  >By clicking sign up, you agree to our
+                  <button class="text-blue-700" @click="toPrivacyPolicy">
+                    Privacy Policy.
+                  </button></ion-label
                 >
               </div>
             </div>
 
-            <div class="text-center mt-5">
+            <div class="text-center">
               <ion-button color="dark" class="w-3/5" shape="round" type="submit"
                 >Sign Up</ion-button
               >
             </div>
 
             <div class="text-center">
-              <ion-button color="dark" fill="clear" disabled="true"
-                >Have an account?</ion-button
-              >
-              <ion-button color="secondary" fill="clear" @click="toSignIn"
-                >Sign In</ion-button
-              >
+              <div class="text-center">
+                <div class="mt-5">
+                  <ion-label
+                    >Already have an account?
+                    <button class="text-blue-400" @click="toSignIn">Sign in</button></ion-label
+                  >
+                </div>
+              </div>
             </div>
 
             <div class="text-center mt-7">
@@ -124,15 +178,12 @@
             </div>
 
             <div class="text-center mt-7">
-              <ion-button color="dark" fill="clear" disabled="true"
-                >Sign up as</ion-button
-              >
-              <ion-button
-                color="secondary"
-                fill="clear"
-                @click="toLoginIndividual"
-                >Individual</ion-button
-              >
+              <div class="mt-5">
+                <ion-label
+                  >Sign up as
+                  <button class="text-blue-400" @click="toLoginIndividual">Individual</button></ion-label
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -169,29 +220,15 @@ export default defineComponent({
     IonToolbar,
   },
 
-  async mounted() {
-    const alert = await alertController.create({
-      cssClass: "my-custom-class",
-      header: "Privacy Policy",
-      message: `Welcome to TRAFEX System.
-The City of Ozamiz (“us”, “we”, or “our”) operates the TRAFEX System (hereinafter referred to as “Service”). We are committed to protecting your privacy as a Ozamiz resident, and even as a non-resident of this City.
-Our Data Privacy Statement governs your visit to this site and explains how we collect, safeguard and disclose information that results from your use of our Service.
-The confidentiality of your information remains our top priority. We shall exert all reasonable efforts to protect it against unauthorized use or disclosure.
-        `,
-      buttons: ["agree", "disagree"],
-    });
-    await alert.present();
-
-    const { role } = await alert.onDidDismiss();
-    console.log("onDidDismiss resolved with role", role);
-  },
-
   methods: {
     toSignIn() {
       this.$router.push("/establishment-login");
     },
     toLoginIndividual() {
       this.$router.push("/individual-regstration");
+    },
+    toPrivacyPolicy(){
+      this.$router.push("/privacy-policy-page");
     },
   },
 });

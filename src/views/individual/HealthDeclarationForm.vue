@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Health Declarion Form</ion-title>
+         <SideMenu/>
       </ion-toolbar>
     </ion-header>
 
@@ -12,8 +12,10 @@
           <ion-title size="large">LoginPage</ion-title>
         </ion-toolbar>
       </ion-header>
-      <div>
-        <div class="h-5/6 w-96 mx-auto block bg-inherit py-1.5 px-1.5 my-3">
+     
+        
+         <div>
+        <div class="h-5/6 w-96 lg:w-auto mx-auto block bg-inherit py-1.5 px-1.5 my-3">
           <div class="text-center">
             <ion-text class="text-2xl font-extrabold"
               >Health Declaration Form</ion-text
@@ -248,6 +250,8 @@
           <ion-text class="text-lg">Contact Tracing App</ion-text>
         </div>
       </div>
+      
+      
     </ion-content>
   </ion-page>
 </template>
@@ -261,6 +265,7 @@ import {
   IonToolbar,
 } from "@ionic/vue";
 import { defineComponent } from "vue";
+import SideMenu from '../../components/SideMenu.vue'
 
 export default defineComponent({
   components: {
@@ -269,6 +274,7 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
+    SideMenu
   },
 });
 </script>

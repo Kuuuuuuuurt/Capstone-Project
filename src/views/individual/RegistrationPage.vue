@@ -2,7 +2,57 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Welcome</ion-title>
+         <div>
+    <aside
+      class="flex lg:flex-col lg:items-center text-gray-700 shadow h-full"
+    >
+      <!-- Side Nav Bar-->
+
+
+      <ul class="flex w-min absolute top-0 right-0">
+        <!-- Items Section -->
+     
+        <li class="hover:bg-gray-100 w-20 lg:w-full ">
+          <a
+            href="/individual-regstration"
+            class="
+              h-16
+              px-6
+              flex flex
+              justify-center
+              items-center
+              lg:w-full
+              focus:text-orange-500
+              text-blue-400
+              capitalize
+            "
+          >
+            <label class='block capitalize tracking-wide text-gray-700 text-m font-bold' >Login</label>
+          </a>
+        </li>
+
+        <li class="hover:bg-gray-100">
+          <a
+            href="."
+            class="
+              h-16
+              px-6
+              flex flex
+              justify-center
+              items-center
+              lg:w-full
+              focus:text-orange-500
+            "
+          >
+           <label class='block capitalize tracking-wide text-gray-700 text-m font-bold' >about</label>
+          </a>
+        </li>
+
+      </ul>
+
+     
+    </aside>
+  </div>
       </ion-toolbar>
     </ion-header>
 
@@ -13,162 +63,109 @@
         </ion-toolbar>
       </ion-header>
       <div>
-        <div class="h-5/6 w-96 mx-auto block bg-inherit py-1.5 px-1.5 my-3">
-          <div>
-            <div>
-              <ion-text class="text-2xl font-extrabold"
-                >Create your account</ion-text
-              >
+        <div class="bg-gray-200 min-h-screen font-mono">
+        <div class="container mx-auto">
+            <div class="inputs w-full max-w-2xl p-6 mx-auto">
+                <h2 class="text-2xl text-gray-900">Create an Account</h2>
+                <form class="mt-6 border-t border-gray-400 pt-4">
+                    <div class='flex flex-wrap -mx-3 mb-6'>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-text-1'>Phone Number</label>
+                            <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' id='grid-text-1' type='text' placeholder='Enter Number'  required>
+                        </div>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>pick your Province</label>
+                            <div class="flex-shrink w-full inline-block relative">
+                                <select class="block appearance-none text-gray-600 w-full bg-white border border-gray-400 shadow-inner px-4 py-2 pr-8 rounded">
+                                    <option>choose ...</option>
+                                    <option>Misamis Occidental</option>
+                                </select>
+                                <div class="pointer-events-none absolute top-0 mt-3  right-0 flex items-center px-2 text-gray-600">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='w-full md:w-full px-3 mb-6'>
+                            <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>pick your Municipality</label>
+                            <div class="flex-shrink w-full inline-block relative">
+                                <select class="block appearance-none text-gray-600 w-full bg-white border border-gray-400 shadow-inner px-4 py-2 pr-8 rounded">
+                                    <option>choose ...</option>
+                                    <option>Ozamiz City</option>
+                                    <option>Clarin</option>
+                                    <option>Tudela</option>
+                                </select>                                
+
+                               <div class="flex items-center justify-between mt-4">
+                                <div class='w-full md:w-1/2 px-1 mb-6'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >Enter Baranggay</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                                <div class='w-full md:w-1/2 px-1 mb-6'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >Enter Purok</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                            </div>
+                                
+                                <div class="pointer-events-none absolute top-0 mt-3  right-0 flex items-center px-2 text-gray-600">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal w-full border-t border-gray-400 pt-4">
+                            <h2 class="text-2xl text-gray-900">Personal info:</h2>
+                            <div class="flex items-center justify-between mt-4">
+                                <div class='w-full md:w-1/2 px-3 mb-6'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >first name</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                                <div class='w-full md:w-1/2 px-3 mb-6'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >last name</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-4">
+                                <div class='w-full md:w-1/2 px-3 mb-6'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >middle name</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                                <div class='w-full md:w-1/2 px-3 mb-6'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2' >suffix</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                            </div>
+
+
+                              <div class="flex items-center justify-between mt-4">
+                                <div class='w-full md:w-1/2 px-3 mb-3'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold' >Age</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                                <div class='w-full md:w-1/2 px-3 mb-3'>
+                                    <label class='block uppercase tracking-wide text-gray-700 text-xs font-bold' >Gender</label>
+                                    <input class='appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500' type='text'  required>
+                                </div>
+                            </div>
+                             <div>
+                            <label class='block tracking-wide text-gray-700 text-xs font-bold mb-2' for='grid-text-1'>By clicking Sign up, you agree to <a href="/privacy-policy-page" class="text-sky-600">Privay Policy</a></label>
+                            </div>
+                            <div class="flex justify-end">
+                                <button class="appearance-none bg-gray-200 text-gray-900 px-2 py-1 shadow-sm border border-gray-400 rounded-md mr-3" type="submit">Sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div>
-              <ion-text class="text-m font-mediumd"
-                >Please fill the information needed to create account.</ion-text
-              >
-            </div>
-
-            <div class="mt-2">
-              <ion-item>
-                <ion-label position="floating">Mobile Number</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">First Name</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Middle Name</ion-label>
-                <ion-input placeholder="Optional"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Last Name</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Suffix</ion-label>
-                <ion-input placeholder="Optional"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Purok</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label position="fixed">Brgy</ion-label>
-                <ion-input placeholder="Enter Value"></ion-input>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label>Municipality/City</ion-label>
-                <ion-select placeholder="Select City">
-                  <ion-select-option value="O">Ozamiz City</ion-select-option>
-                  <ion-select-option value="C">Clarin</ion-select-option>
-                  <ion-select-option value="T">Tudela</ion-select-option>
-                </ion-select>
-              </ion-item>
-            </div>
-
-            <div class="mt-1.5">
-              <ion-item>
-                <ion-label>Province</ion-label>
-                <ion-select placeholder="Select Province">
-                  <ion-select-option value="O"
-                    >Misamis Occidental</ion-select-option
-                  >
-                </ion-select>
-              </ion-item>
-
-              <div class="mt-1.5">
-                <ion-item>
-                  <ion-label>Gender</ion-label>
-                  <ion-select placeholder="Select One">
-                    <ion-select-option value="f">Female</ion-select-option>
-                    <ion-select-option value="m">Male</ion-select-option>
-                    <ion-select-option value="lgbt">LGBTQ+</ion-select-option>
-                    <ion-select-option value="pnts"
-                      >Prefer not to say</ion-select-option
-                    >
-                  </ion-select>
-                </ion-item>
-              </div>
-
-              <div class="mt-1.5">
-                <ion-item>
-                  <ion-label position="fixed">Age</ion-label>
-                  <ion-input type="number"></ion-input>
-                </ion-item>
-              </div>
-
-              <div class="mt-1.5">
-                <ion-item>
-                  <ion-label position="fixed">Password</ion-label>
-                  <ion-input type="password"></ion-input>
-                </ion-item>
-              </div>
-
-              <div class="mt-5">
-                <input type="checkbox" />
-                <ion-label class="ml-2"
-                  >I have read and accept the Privacy Policy.</ion-label
-                >
-              </div>
-            </div>
-
-            <div class="text-center mt-5">
-              <ion-button color="dark" class="w-3/5" shape="round" type="submit"
-                >Sign Up</ion-button
-              >
-            </div>
-
-            <div class="text-center">
-              <ion-button color="dark" fill="clear" disabled="true"
-                >Have an account?</ion-button
-              >
-              <ion-button color="secondary" fill="clear" @click="toSignIn"
-                >Sign In</ion-button
-              >
-            </div>
-
-            <div class="text-center mt-7">
-              <ion-text>━━━━━ OR ━━━━━━ </ion-text>
-            </div>
-
-            <div class="text-center mt-7">
-              <ion-button color="dark" fill="clear" disabled="true"
-                >Sign up as</ion-button
-              >
-              <ion-button color="secondary" fill="clear"
-                >Establishment</ion-button
-              >
-            </div>
-          </div>
         </div>
+    </div>
 
-        <div class="text-right pr-12">
+        <!-- <div class="text-right pr-12">
           <ion-text class="font-extrabold text-xl">TRA</ion-text>
           <ion-text class="font-extrabold text-xl text-sky-500">FEX</ion-text>
         </div>
         <div class="text-right pr-3">
           <ion-text class="text-lg">Contact Tracing App</ion-text>
-        </div>
+        </div> -->
       </div>
     </ion-content>
   </ion-page>
@@ -194,34 +191,19 @@ export default defineComponent({
     IonToolbar,
   },
 
-  async mounted() {
-    const alert = await alertController.create({
-      cssClass: "my-custom-class",
-      header: "Privacy Policy",
-      message: `This appointment and scheduling system allocates slots on a first come, first served basis.
-        Users accept the responsibility for supplying, checking, and
-        verifying the accuracy and correctness of the information they
-        provide on this system in connection with their application.
-        Incorrect or inaccurate information supplied may result in
-        forfeiture of passport application.
-        Users accept the responsibility for supplying, checking, and
-          verifying the accuracy and correctness of the information they
-          provide on this system in connection with their application.
-          Incorrect or inaccurate information supplied may result in
-          forfeiture of passport application.
-        `,
-      buttons: ["agree", "disagree"],
-    });
-    await alert.present();
-
-    const { role } = await alert.onDidDismiss();
-    console.log("onDidDismiss resolved with role", role);
-  },
-
   methods: {
     toSignIn() {
       this.$router.push("/individual-login");
     },
+    toPrivacyPolicy(){
+      this.$router.push("/privacy-policy-page");
+    },
+    toEstablishment(){
+      this.$router.push("/establishment-registration");
+    },
+    toHomePage(){
+      this.$router.push("");
+    }
   },
 });
 </script>

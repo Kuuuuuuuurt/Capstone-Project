@@ -2,7 +2,57 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Welcome back</ion-title>
+        <div>
+    <aside
+      class="flex lg:flex-col lg:items-center text-gray-700 shadow h-full"
+    >
+      <!-- Side Nav Bar-->
+
+
+      <ul class="flex w-min absolute top-0 right-0">
+        <!-- Items Section -->
+     
+        <li class="hover:bg-gray-100 w-20 lg:w-full ">
+          <a
+            href="/individual-regstration"
+            class="
+              h-16
+              px-6
+              flex flex
+              justify-center
+              items-center
+              lg:w-full
+              focus:text-orange-500
+              text-blue-400
+              capitalize
+            "
+          >
+              <label class='block capitalize tracking-wide text-gray-700 text-m font-bold' >register</label>
+          </a>
+        </li>
+
+        <li class="hover:bg-gray-100">
+          <a
+            href="."
+            class="
+              h-16
+              px-6
+              flex flex
+              justify-center
+              items-center
+              lg:w-full
+              focus:text-orange-500
+            "
+          >
+             <label class='block capitalize tracking-wide text-gray-700 text-m font-bold' >about</label>
+          </a>
+        </li>
+
+      </ul>
+
+     
+    </aside>
+  </div>
       </ion-toolbar>
     </ion-header>
 
@@ -12,8 +62,8 @@
           <ion-title size="large">LoginPage</ion-title>
         </ion-toolbar>
       </ion-header>
-
-      <div class="h-5/6 w-96 mx-auto block bg-inherit py-1.5 px-1.5 my-3">
+<div>
+      <div class="h-5/6 w-96 mx-auto block bg-inherit py-1.5 px-1.5 my-3 ">
         <div>
           <div>
             <ion-text class="text-2xl font-extrabold"
@@ -40,7 +90,7 @@
           </div>
 
           <div class="text-right mt-2.5">
-            <ion-button class="pr-2" color="secondary" fill="clear"
+            <ion-button class="pr-2" color="secondary" fill="clear" @click="btnForgotPassword"
               >Forgot Password?</ion-button
             >
           </div>
@@ -52,10 +102,9 @@
           </div>
 
           <div class="text-center">
-            <ion-button color="dark" fill="clear" disabled="true"
-              >New User?</ion-button
-            >
-            <ion-button color="secondary" fill="clear" @click="toSignUp">Sign Up</ion-button>
+           <div class="mt-5">
+                <ion-label>New user?<button class="text-blue-400" @click="toSignUp">Sign up</button></ion-label>
+              </div>
           </div>
 
           <div class="text-center mt-7">
@@ -63,12 +112,9 @@
           </div>
 
           <div class="text-center mt-7">
-            <ion-button color="dark" fill="clear" disabled="true"
-              >Sign in as</ion-button
-            >
-            <ion-button color="secondary" fill="clear" @click="toEstablishmentLogin"
-              >Establishment</ion-button
-            >
+          <div class="mt-5">
+                <ion-label>Sign in as <button class="text-blue-400" @click="toEstablishmentLogin">Establishment</button></ion-label>
+              </div>
           </div>
         </div>
       </div>
@@ -79,6 +125,7 @@
       </div>
       <div class="text-right pr-3">
         <ion-text class="text-lg">Contact Tracing App</ion-text>
+      </div>
       </div>
     </ion-content>
   </ion-page>
@@ -94,6 +141,8 @@ import {
   alertController,
 } from "@ionic/vue";
 import { defineComponent } from "vue";
+//import PublicSideMenu from '../../components/PublicSideMenu.vue'
+
 
 export default defineComponent({
   components: {
@@ -102,6 +151,7 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar,
+    //PublicSideMenu
   },
 
  
@@ -115,6 +165,9 @@ export default defineComponent({
     },
     toEstablishmentLogin(){
       this.$router.push("/establishment-login");
+    },
+    btnForgotPassword(){
+      this.$router.push("/change-password-page");
     }
   }
 });
