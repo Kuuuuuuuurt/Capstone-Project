@@ -43,10 +43,10 @@
 
 
       </div> -->
-        <div class="h-screen w-screen lg:flex bg-gray-200">
+        <div class="h-screen w-screen bg-gray-200">
 	<!-- container -->
     <SideMenu/>
-
+<div>gfdgd</div>
 </div>
 
 

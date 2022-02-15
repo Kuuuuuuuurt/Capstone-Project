@@ -1,7 +1,7 @@
 <template>
   <div>
     <aside
-      class="flex lg:flex-col lg:items-center bg-white text-gray-700 shadow h-full"
+      class="flex flex-col lg:items-center bg-white text-gray-700 shadow h-full"
     >
       <!-- Side Nav Bar-->
 
@@ -118,9 +118,7 @@
             </svg>
           </a>
         </li>
-      </ul>
-
-      <div class="mt-auto h-16 flex items-center lg:w-full">
+         <li class="mt-auto h-16 flex items-center">
         <!-- Action Section -->
         <button
           @click="logout"
@@ -131,7 +129,6 @@
             flex flex
             justify-center
             items-center
-            lg:w-full
             focus:text-orange-500
             hover:bg-red-200
             focus:outline-none
@@ -154,7 +151,10 @@
             <line x1="21" y1="12" x2="9" y2="12"></line>
           </svg>
         </button>
-      </div>
+      </li>
+      </ul>
+
+     
     </aside>
   </div>
 </template>
