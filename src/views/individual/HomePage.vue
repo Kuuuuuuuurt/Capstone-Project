@@ -46,7 +46,8 @@
         <div class="h-screen w-screen bg-gray-200">
 	<!-- container -->
     <SideMenu/>
-<div>gfdgd</div>
+
+<div>gfdgd p[ush practiccceee</div>
 </div>
 
 
